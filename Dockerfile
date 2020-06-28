@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.12
 
 MAINTAINER Alexei Ledenev <alexei@codefresh.io>
 
@@ -8,7 +8,7 @@ ENV DOCKER_API_VERSION 1.40
 ENV DOCKER_VERSION 19.03.11
 
 # add some packages
-RUN apk --no-cache add curl bash openssl openssh-client python \
+RUN apk --no-cache add curl bash openssl openssh-client python2 \
     && rm -rf /var/cache/apk/*
 
 # install docker client
